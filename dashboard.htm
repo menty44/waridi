@@ -10,10 +10,18 @@
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <script src="/libs/jquery-2.1.1.min.js"></script>
+    <style>
+        .carousel .carousel-item{
+            width:100%;
+        }
+    </style>
 </head>
 <body>
 <nav class=" pink lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+    <div class="nav-wrapper ">
+        <span style="float: left; padding-left: 2%">
+            <a  id="logo-container" href="#" class="brand-logo">Logo</a>
+        </span>
 
         <ul class="right hide-on-med-and-down">
             <li><a href="/login.htm">
@@ -31,11 +39,20 @@
             </li>
         </ul>
 
-        <ul class="right hide-on-med-and-down">
-            <li><a href="#">PROFILE</a></li>
+        <ul class="right hide-on-med-and-down" style="padding-right: 30px">
+            <li><a href="profile.htm">CHAT with me </a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
-            <li><a href="#">DASHBOARD</a></li>
+            <li><a href="dashboard.htm">F.A.Q</a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="dashboard.htm">NOTIFICATIONS<span class="new badge">4</span></a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="profile.htm">PROFILE</a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="dashboard.htm">DASHBOARD</a></li>
         </ul>
 
         <ul id="nav-mobile" class="sidenav">
@@ -44,22 +61,42 @@
 
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
+
 </nav>
-<div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-        <br><br>
-        <h1 class="header center orange-text">Starter Template</h1>
-        <div class="row center">
-            <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-        <div class="row center">
-            <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
-        </div>
-        <br><br>
-
-    </div>
+<!--<div class = "row">-->
+<!--<div class = "col s12">-->
+<ul id="tabs-swipe-demo" class="tabs">
+    <li class="tab col s3"><a href="#swipe-1">Services</a></li>
+    <li class="tab col s3"><a class="active" href="#swipe-2">Categories</a></li>
+    <li class="tab col s3"><a href="#swipe-3">Users</a></li>
+    <li class="tab col s3"><a href="#swipe-4">Finance</a></li>
+    <li class="tab col s3"><a href="#swipe-5">Advertisements</a></li>
+</ul>
+<div id="swipe-1" class="col s12 ">
+    <h5 style="float: left; padding-left: 1.8%">Services
+        <hr>
+    </h5>
 </div>
-
+<div style="float: left; padding-left: 1.8%" id="swipe-2" class="col s12 ">
+    <h5 style="float: left; padding-left: 1.8%">Categories
+        <hr>
+    </h5>
+</div>
+<div style="float: left; padding-left: 1.8%" id="swipe-3" class="col s12 ">
+    <h5 style="float: left; padding-left: 1.8%">Users
+        <hr>
+    </h5>
+</div>
+<div style="float: left; padding-left: 1.8%" id="swipe-4" class="col s12 ">
+    <h5 style="float: left; padding-left: 1.8%">Finance
+        <hr>
+    </h5>
+</div>
+<div style="float: left; padding-left: 1.8%" id="swipe-5" class="col s12 ">
+    <h5 style="float: left; padding-left: 1.8%">Advertisements
+        <hr>
+    </h5>
+</div>
 
 <div class="container">
     <div class="section">
@@ -97,6 +134,14 @@
     </div>
     <br><br>
 </div>
+<script>
+    $(document).ready(function(){
+        $('ul.tabs').tabs({
+            swipeable : true,
+            responsiveThreshold : 1920
+        });
+    });
+</script>
 
 <footer class="page-footer pink">
     <div class="container">
